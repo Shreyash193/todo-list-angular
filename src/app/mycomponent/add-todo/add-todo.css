@@ -1,0 +1,50 @@
+.todo-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field label {
+  color: #31465c;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.form-control {
+  border: 1px solid #cbd6e2;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #172033;
+  font-size: 15px;
+  min-height: 42px;
+}
+
+.form-control:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
+textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.add-button {
+  background: #0f766e;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  min-height: 44px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.add-button:hover,
+.add-button:focus {
+  background: #115e59;
+  transform: translateY(-1px);
+}

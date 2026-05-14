@@ -1,0 +1,8 @@
+<article class="todo-card">
+  <div class="todo-card__number">{{ todo.sno }}</div>
+  <div class="todo-card__content">
+    <h3>{{ todo.title }}</h3>
+    <p>{{ todo.desc }}</p>
+  </div>
+  <button class="btn btn-danger delete-button" (click)="onRemove()">Delete</button>
+</article>

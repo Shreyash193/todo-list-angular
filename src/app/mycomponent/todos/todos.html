@@ -1,0 +1,31 @@
+<section class="todo-board">
+  <div class="todo-panel todo-panel--form">
+    <div class="section-heading">
+      <span class="section-heading__label">Create</span>
+      <h2>Add Todo</h2>
+    </div>
+    <app-add-todo (toAdd)="onTodoAdd($event)"></app-add-todo>
+  </div>
+
+  <div class="todo-panel todo-panel--list">
+    <div class="section-heading">
+      <span class="section-heading__label">Tasks</span>
+      <h2>Your Todos</h2>
+    </div>
+
+    <div *ngIf="todos.length === 0; else todosList" class="empty-state">
+      <strong>No todos available</strong>
+      <span>Add your first task to get started.</span>
+    </div>
+
+    <ng-template #todosList>
+      <div class="todo-list">
+        <app-todos-items
+          *ngFor="let todo of todos"
+          [todo]="todo"
+          (todelete)="onTodoDelete($event)"
+        ></app-todos-items>
+      </div>
+    </ng-template>
+  </div>
+</section>

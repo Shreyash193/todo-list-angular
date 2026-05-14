@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()" class="todo-form">
+  <div class="form-field">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      [(ngModel)]="title"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Enter title"
+    >
+  </div>
+
+  <div class="form-field">
+    <label for="description">Description</label>
+    <textarea
+      class="form-control"
+      [(ngModel)]="desc"
+      id="description"
+      name="desc"
+      rows="4"
+      placeholder="Enter description"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary add-button">
+    Add Todo
+  </button>
+</form>
