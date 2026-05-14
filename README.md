@@ -1,59 +1,81 @@
-# TudoList
+# Todo List Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+A simple and styled todo-list application built with Angular. The app lets users add todos, delete todos, and keep tasks saved locally in the browser using `localStorage`.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Add todos with a title and description
+- Delete todos from the list
+- Serial numbers are assigned from `1` to `100`
+- Todos are saved in browser `localStorage`
+- Empty-state message when no todos are available
+- Styled responsive UI with Angular components and Bootstrap
+- SSR-safe `localStorage` handling
 
-```bash
-ng serve
+## Tech Stack
+
+- Angular 21
+- TypeScript
+- Bootstrap
+- HTML/CSS
+- Browser `localStorage`
+
+## Project Structure
+
+```text
+src/app/
+  Todo.ts
+  app.html
+  app.ts
+  mycomponent/
+    add-todo/
+    todos/
+    todos-items/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Getting Started
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Install dependencies:
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Start the local development server:
 
 ```bash
-ng generate --help
+npm run start
 ```
 
-## Building
+Open the app in your browser:
 
-To build the project run:
+```text
+http://127.0.0.1:4200
+```
+
+## Build
+
+Create a production build:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build output is generated in:
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```text
+dist/tudo-list
 ```
 
-## Running end-to-end tests
+## Usage
 
-For end-to-end (e2e) testing, run:
+1. Enter a todo title.
+2. Enter a todo description.
+3. Click `Add Todo`.
+4. Click `Delete` to remove a todo.
 
-```bash
-ng e2e
-```
+Todos remain saved in the browser until local storage is cleared.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Author
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Shreyash
